@@ -63,7 +63,16 @@ const App = () => {
     });
   };
 
-  
+  return (
+    <>
+      <div className=" mx-auto max-w-[370px] px-4">
+        <Navbar />
+        
+      </div>
+      <AddAndUpdateContact onClose={onClose} isOpen={isOpen} />
+      <ToastContainer position="bottom-center" />
+    </>
+  );
 };
 
 export default App;
