@@ -12,6 +12,17 @@ const contactSchemaValidation = Yup.object().shape({
 
 const AddAndUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
   
+  const addContact = async (contact) => {
+    try {
+      const contactReff = collection(db, "contacts");
+      await addDoc(contactReff, contact);
+      onClose();
+      toast.success("Contact Added Successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   
 };
 
