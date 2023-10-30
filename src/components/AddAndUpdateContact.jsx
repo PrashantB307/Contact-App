@@ -34,7 +34,13 @@ const AddAndUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
     }
   };
 
-  
+  return (
+    <div>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        
+      </Modal>
+    </div>
+  );
 };
 
 export default AddAndUpdateContact;
